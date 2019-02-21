@@ -1,0 +1,11 @@
+[Service]
+[Unit]
+Description=nanny for stack driver service
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=60s
+ExecStart=/root/sananny.sh
+[Install]
+WantedBy=multi-user.target
